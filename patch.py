@@ -1,0 +1,6 @@
+f = file('Hook.dylib')
+contents = f.read().replace("\x32\x00\x00\x00\x20\x00\x00\x00\x01\x00\x00\x00", "\x32\x00\x00\x00\x20\x00\x00\x00\x06\x00\x00\x00")
+f.close()
+f = file('Hook.dylib','wb')
+f.write(contents)
+f.close()
